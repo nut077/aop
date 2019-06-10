@@ -8,6 +8,6 @@ import org.springframework.stereotype.Component;
 public class MemberDao {
 
     public void addMember() {
-        log.info(getClass().toString(), "{}: DOING STUFF: ADDING A MEMBER ACCOUNT");
+        log.info(getClass().toString() + " : DOING STUFF: ADDING A MEMBER ACCOUNT");
     }
 }

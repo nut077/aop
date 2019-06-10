@@ -16,6 +16,7 @@ public class AopApplication {
         // get the bean from spring container
         AccountDao accountDao = context.getBean("accountDao", AccountDao.class);
         accountDao.addAccount();
+        accountDao.addAccount("Freedom");
 
         MemberDao memberDao = context.getBean("memberDao", MemberDao.class);
         memberDao.addMember();

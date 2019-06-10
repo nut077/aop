@@ -10,4 +10,8 @@ public class AccountDao {
     public void addAccount() {
         log.info(getClass() + "DOING MY DB WORK: ADDING AN ACCOUNT");
     }
+
+    public void addAccount(String name) {
+        log.info(getClass() + "DOING MY DB WORK: ADDING AN ACCOUNT NAME : " + name);
+    }
 }
