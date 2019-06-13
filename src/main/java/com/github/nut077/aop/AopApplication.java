@@ -18,6 +18,7 @@ public class AopApplication {
         accountDao.setName("Freedom");
         accountDao.addAccount();
         accountDao.addAccount("Freedom");
+        accountDao.addAccount(new AccountDao("eiei", "55"));
 
         MemberDao memberDao = context.getBean("memberDao", MemberDao.class);
         memberDao.addMember();
