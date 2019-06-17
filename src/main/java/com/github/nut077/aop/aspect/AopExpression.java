@@ -19,4 +19,7 @@ public class AopExpression {
 
     @Pointcut("execution(* com.github.nut077.aop.dao.*.get*(..))")
     private void getter() {}
+
+    @Pointcut("execution(* com.github.nut077.aop.dao.AccountDao.getAccount())")
+    public void afterReturning() {}
 }
