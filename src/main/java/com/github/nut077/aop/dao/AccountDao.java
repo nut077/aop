@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @Component
 @Slf4j
@@ -37,5 +38,22 @@ public class AccountDao {
         list.add(new AccountDao("B", "2"));
         list.add(new AccountDao("C", "3"));
         return list;
+    }
+
+    public int afterThrowing() {
+        return Integer.parseInt("");
+    }
+
+    public int after() {
+        return 55;
+    }
+
+    public String around() {
+        try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        throw new RuntimeException("Throw String from main");
     }
 }

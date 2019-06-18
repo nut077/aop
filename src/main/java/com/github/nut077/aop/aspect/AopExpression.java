@@ -22,4 +22,13 @@ public class AopExpression {
 
     @Pointcut("execution(* com.github.nut077.aop.dao.AccountDao.getAccount())")
     public void afterReturning() {}
+
+    @Pointcut("execution(* com.github.nut077.aop.dao.AccountDao.afterThrowing())")
+    public void afterThrowing() {}
+
+    @Pointcut("execution(* com.github.nut077.aop.dao.AccountDao.after())") // จะทำงานเสมอ แม้กระทั่ง throw
+    public void after() {}
+
+    @Pointcut("execution(* com.github.nut077.aop.dao.AccountDao.around())")
+    public void around() {}
 }
